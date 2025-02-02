@@ -6,3 +6,5 @@
 - Staged: backend/next.config.js, backend/package-lock.json
 ## [2025-02-02 17:55:15] chore(expo): configure EAS build profiles and deployment metadata
 - Staged: backend/package.json, backend/src/app/api/auth/guest/route.ts
+## [2025-02-02 19:28:34] chore(backend): setup Next.js backend with Drizzle ORM configuration
+- Staged: backend/src/app/api/auth/login/route.ts, backend/src/app/api/auth/register/route.ts
