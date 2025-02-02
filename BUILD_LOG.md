@@ -4,3 +4,5 @@
 - Staged: backend/drizzle.config.ts, backend/next-env.d.ts
 ## [2025-02-02 15:50:48] chore(expo): setup TypeScript configuration and path aliases
 - Staged: backend/next.config.js, backend/package-lock.json
+## [2025-02-02 17:55:15] chore(expo): configure EAS build profiles and deployment metadata
+- Staged: backend/package.json, backend/src/app/api/auth/guest/route.ts
