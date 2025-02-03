@@ -12,3 +12,5 @@
 - Staged: backend/src/app/api/chat/route.ts, backend/src/app/api/community/challenges/[id]/join/route.ts
 ## [2025-02-03 17:44:15] feat(backend): add database seed script and mock data generators
 - Staged: backend/src/app/api/community/challenges/route.ts, backend/src/app/api/community/groups/[id]/join/route.ts
+## [2025-02-03 19:47:41] feat(backend): implement auth routes with JWT and guest login fallback
+- Staged: backend/src/app/api/community/groups/route.ts, backend/src/app/api/community/polls/[id]/vote/route.ts
