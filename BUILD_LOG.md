@@ -8,3 +8,5 @@
 - Staged: backend/package.json, backend/src/app/api/auth/guest/route.ts
 ## [2025-02-02 19:28:34] chore(backend): setup Next.js backend with Drizzle ORM configuration
 - Staged: backend/src/app/api/auth/login/route.ts, backend/src/app/api/auth/register/route.ts
+## [2025-02-03 15:58:18] feat(backend): define Drizzle database schema for users and records
+- Staged: backend/src/app/api/chat/route.ts, backend/src/app/api/community/challenges/[id]/join/route.ts
