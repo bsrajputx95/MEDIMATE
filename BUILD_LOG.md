@@ -14,3 +14,5 @@
 - Staged: backend/src/app/api/community/challenges/route.ts, backend/src/app/api/community/groups/[id]/join/route.ts
 ## [2025-02-03 19:47:41] feat(backend): implement auth routes with JWT and guest login fallback
 - Staged: backend/src/app/api/community/groups/route.ts, backend/src/app/api/community/polls/[id]/vote/route.ts
+## [2025-02-04 13:45:53] feat(backend): implement cura appointments and doctor directory APIs
+- Staged: backend/src/app/api/community/polls/route.ts, backend/src/app/api/community/posts/[id]/like/route.ts
