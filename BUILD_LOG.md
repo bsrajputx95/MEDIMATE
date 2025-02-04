@@ -16,3 +16,5 @@
 - Staged: backend/src/app/api/community/groups/route.ts, backend/src/app/api/community/polls/[id]/vote/route.ts
 ## [2025-02-04 13:45:53] feat(backend): implement cura appointments and doctor directory APIs
 - Staged: backend/src/app/api/community/polls/route.ts, backend/src/app/api/community/posts/[id]/like/route.ts
+## [2025-02-04 15:11:23] feat(backend): implement medication tracking and prescription routes
+- Staged: backend/src/app/api/community/posts/route.ts, backend/src/app/api/cura/appointments/[id]/route.ts
