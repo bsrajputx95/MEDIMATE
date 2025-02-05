@@ -18,3 +18,5 @@
 - Staged: backend/src/app/api/community/polls/route.ts, backend/src/app/api/community/posts/[id]/like/route.ts
 ## [2025-02-04 15:11:23] feat(backend): implement medication tracking and prescription routes
 - Staged: backend/src/app/api/community/posts/route.ts, backend/src/app/api/cura/appointments/[id]/route.ts
+## [2025-02-05 16:29:15] feat(backend): add test reports and treatment plan endpoints
+- Staged: backend/src/app/api/cura/appointments/route.ts, backend/src/app/api/cura/doctors/route.ts
