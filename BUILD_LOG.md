@@ -24,3 +24,5 @@
 - Staged: backend/src/app/api/cura/medications/[id]/route.ts, backend/src/app/api/cura/medications/route.ts
 ## [2025-02-06 12:28:01] feat(backend): add health metrics logging and goal tracker APIs
 - Staged: backend/src/app/api/cura/test-reports/route.ts, backend/src/app/api/cura/treatments/route.ts
+## [2025-02-06 14:35:55] feat(backend): implement community posts, challenges, and poll voting APIs
+- Staged: backend/src/app/api/food/analyze/route.ts, backend/src/app/api/health/goals/[id]/route.ts
