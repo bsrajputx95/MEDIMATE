@@ -22,3 +22,5 @@
 - Staged: backend/src/app/api/cura/appointments/route.ts, backend/src/app/api/cura/doctors/route.ts
 ## [2025-02-05 18:53:27] feat(backend): implement food photo analysis API route
 - Staged: backend/src/app/api/cura/medications/[id]/route.ts, backend/src/app/api/cura/medications/route.ts
+## [2025-02-06 12:28:01] feat(backend): add health metrics logging and goal tracker APIs
+- Staged: backend/src/app/api/cura/test-reports/route.ts, backend/src/app/api/cura/treatments/route.ts
