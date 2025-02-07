@@ -26,3 +26,5 @@
 - Staged: backend/src/app/api/cura/test-reports/route.ts, backend/src/app/api/cura/treatments/route.ts
 ## [2025-02-06 14:35:55] feat(backend): implement community posts, challenges, and poll voting APIs
 - Staged: backend/src/app/api/food/analyze/route.ts, backend/src/app/api/health/goals/[id]/route.ts
+## [2025-02-07 10:51:48] feat(backend): add profile management and onboarding completion routes
+- Staged: backend/src/app/api/health/goals/route.ts, backend/src/app/api/health/metrics/route.ts
