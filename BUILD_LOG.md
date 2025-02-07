@@ -30,3 +30,5 @@
 - Staged: backend/src/app/api/health/goals/route.ts, backend/src/app/api/health/metrics/route.ts
 ## [2025-02-07 12:36:39] feat(expo): implement root _layout navigation and theme design tokens
 - Staged: backend/src/app/api/health/reports/route.ts, backend/src/app/api/profile/onboarding/route.ts
+## [2025-02-07 14:30:24] feat(expo): add tabs navigation for cura, healthyics, medtalk, and profile
+- Staged: backend/src/app/api/profile/route.ts, backend/src/db/index.ts
