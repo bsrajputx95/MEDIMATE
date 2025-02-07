@@ -28,3 +28,5 @@
 - Staged: backend/src/app/api/food/analyze/route.ts, backend/src/app/api/health/goals/[id]/route.ts
 ## [2025-02-07 10:51:48] feat(backend): add profile management and onboarding completion routes
 - Staged: backend/src/app/api/health/goals/route.ts, backend/src/app/api/health/metrics/route.ts
+## [2025-02-07 12:36:39] feat(expo): implement root _layout navigation and theme design tokens
+- Staged: backend/src/app/api/health/reports/route.ts, backend/src/app/api/profile/onboarding/route.ts
