@@ -34,3 +34,5 @@
 - Staged: backend/src/app/api/profile/route.ts, backend/src/db/index.ts
 ## [2025-02-09 10:12:06] feat(expo): implement Auth screen with guest login support
 - Staged: backend/src/db/schema.ts, backend/src/db/seed.ts
+## [2025-02-09 12:59:34] feat(expo): implement Onboarding carousel and health profile setup
+- Staged: backend/src/lib/auth.ts, backend/src/middleware.ts
