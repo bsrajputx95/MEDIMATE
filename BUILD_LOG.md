@@ -36,3 +36,5 @@
 - Staged: backend/src/db/schema.ts, backend/src/db/seed.ts
 ## [2025-02-09 12:59:34] feat(expo): implement Onboarding carousel and health profile setup
 - Staged: backend/src/lib/auth.ts, backend/src/middleware.ts
+## [2025-02-09 14:43:44] feat(cura): add DoctorCard, AppointmentCard, and booking modal
+- Staged: backend/tsconfig.json, backend/vercel.json
