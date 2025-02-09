@@ -32,3 +32,5 @@
 - Staged: backend/src/app/api/health/reports/route.ts, backend/src/app/api/profile/onboarding/route.ts
 ## [2025-02-07 14:30:24] feat(expo): add tabs navigation for cura, healthyics, medtalk, and profile
 - Staged: backend/src/app/api/profile/route.ts, backend/src/db/index.ts
+## [2025-02-09 10:12:06] feat(expo): implement Auth screen with guest login support
+- Staged: backend/src/db/schema.ts, backend/src/db/seed.ts
