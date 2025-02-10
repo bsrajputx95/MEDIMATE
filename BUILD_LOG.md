@@ -40,3 +40,5 @@
 - Staged: backend/tsconfig.json, backend/vercel.json
 ## [2025-02-10 11:44:50] feat(cura): implement MedicationCard and daily streak tracker
 - Staged: docs/API.md, docs/DEPLOYMENT.md
+## [2025-02-10 13:56:55] feat(cura): add MedicationReminderSetup and test report visualizer
+- Staged: docs/QUICK_DEPLOY.md, docs/USER_GUIDE.md
