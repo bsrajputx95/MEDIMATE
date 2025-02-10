@@ -38,3 +38,5 @@
 - Staged: backend/src/lib/auth.ts, backend/src/middleware.ts
 ## [2025-02-09 14:43:44] feat(cura): add DoctorCard, AppointmentCard, and booking modal
 - Staged: backend/tsconfig.json, backend/vercel.json
+## [2025-02-10 11:44:50] feat(cura): implement MedicationCard and daily streak tracker
+- Staged: docs/API.md, docs/DEPLOYMENT.md
