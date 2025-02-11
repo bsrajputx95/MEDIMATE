@@ -42,3 +42,5 @@
 - Staged: docs/API.md, docs/DEPLOYMENT.md
 ## [2025-02-10 13:56:55] feat(cura): add MedicationReminderSetup and test report visualizer
 - Staged: docs/QUICK_DEPLOY.md, docs/USER_GUIDE.md
+## [2025-02-11 16:21:11] feat(cura): implement TreatmentPlanCard and prescription list
+- Staged: expo/.env.production, expo/LICENSE
