@@ -44,3 +44,5 @@
 - Staged: docs/QUICK_DEPLOY.md, docs/USER_GUIDE.md
 ## [2025-02-11 16:21:11] feat(cura): implement TreatmentPlanCard and prescription list
 - Staged: expo/.env.production, expo/LICENSE
+## [2025-02-11 18:27:03] feat(health): implement HealthBuddy chat and suggested questions harness
+- Staged: expo/README.md, expo/app.json
