@@ -50,3 +50,5 @@
 - Staged: expo/app/(tabs)/_layout.tsx, expo/app/(tabs)/cura.tsx
 ## [2025-02-12 16:16:28] feat(scanner): implement food photo scanner and nutrition breakdown modal
 - Staged: expo/app/(tabs)/healthyics.tsx, expo/app/(tabs)/index.tsx
+## [2025-02-12 18:50:09] feat(community): add GroupCard, ChallengeCard, and PollCard components
+- Staged: expo/app/(tabs)/medtalk.tsx, expo/app/(tabs)/profile.tsx
