@@ -48,3 +48,5 @@
 - Staged: expo/README.md, expo/app.json
 ## [2025-02-12 14:24:16] feat(health): add healthyics dashboard and metrics stat cards
 - Staged: expo/app/(tabs)/_layout.tsx, expo/app/(tabs)/cura.tsx
+## [2025-02-12 16:16:28] feat(scanner): implement food photo scanner and nutrition breakdown modal
+- Staged: expo/app/(tabs)/healthyics.tsx, expo/app/(tabs)/index.tsx
