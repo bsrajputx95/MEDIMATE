@@ -52,3 +52,5 @@
 - Staged: expo/app/(tabs)/healthyics.tsx, expo/app/(tabs)/index.tsx
 ## [2025-02-12 18:50:09] feat(community): add GroupCard, ChallengeCard, and PollCard components
 - Staged: expo/app/(tabs)/medtalk.tsx, expo/app/(tabs)/profile.tsx
+## [2025-02-12 20:48:57] feat(community): implement PostCard and expert answer card views
+- Staged: expo/app/+not-found.tsx, expo/app/_layout.tsx
