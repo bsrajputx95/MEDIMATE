@@ -46,3 +46,5 @@
 - Staged: expo/.env.production, expo/LICENSE
 ## [2025-02-11 18:27:03] feat(health): implement HealthBuddy chat and suggested questions harness
 - Staged: expo/README.md, expo/app.json
+## [2025-02-12 14:24:16] feat(health): add healthyics dashboard and metrics stat cards
+- Staged: expo/app/(tabs)/_layout.tsx, expo/app/(tabs)/cura.tsx
