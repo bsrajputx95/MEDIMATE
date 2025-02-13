@@ -56,3 +56,5 @@
 - Staged: expo/app/+not-found.tsx, expo/app/_layout.tsx
 ## [2025-02-13 11:38:43] feat(ui): implement Header, FloatingAssistantBot, and custom TabBar
 - Staged: expo/app/auth.tsx, expo/app/food-scanner.tsx
+## [2025-02-13 13:39:15] feat(ui): add Avatar, Badge, Button, Card, and Input primitives
+- Staged: expo/app/health-buddy.tsx, expo/app/modal.tsx
