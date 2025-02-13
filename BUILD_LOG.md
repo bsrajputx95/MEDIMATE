@@ -54,3 +54,5 @@
 - Staged: expo/app/(tabs)/medtalk.tsx, expo/app/(tabs)/profile.tsx
 ## [2025-02-12 20:48:57] feat(community): implement PostCard and expert answer card views
 - Staged: expo/app/+not-found.tsx, expo/app/_layout.tsx
+## [2025-02-13 11:38:43] feat(ui): implement Header, FloatingAssistantBot, and custom TabBar
+- Staged: expo/app/auth.tsx, expo/app/food-scanner.tsx
