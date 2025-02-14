@@ -58,3 +58,5 @@
 - Staged: expo/app/auth.tsx, expo/app/food-scanner.tsx
 ## [2025-02-13 13:39:15] feat(ui): add Avatar, Badge, Button, Card, and Input primitives
 - Staged: expo/app/health-buddy.tsx, expo/app/modal.tsx
+## [2025-02-14 16:34:33] feat(ui): add Modal, ProgressBar, Skeleton, and LoadingSpinner widgets
+- Staged: expo/app/onboarding.tsx, expo/assets/images/adaptive-icon.png
