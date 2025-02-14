@@ -60,3 +60,5 @@
 - Staged: expo/app/health-buddy.tsx, expo/app/modal.tsx
 ## [2025-02-14 16:34:33] feat(ui): add Modal, ProgressBar, Skeleton, and LoadingSpinner widgets
 - Staged: expo/app/onboarding.tsx, expo/assets/images/adaptive-icon.png
+## [2025-02-14 18:41:03] feat(ui): implement FeedbackAnimation and OfflineIndicator banner
+- Staged: expo/assets/images/favicon.png, expo/assets/images/icon.png
