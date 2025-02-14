@@ -62,3 +62,5 @@
 - Staged: expo/app/onboarding.tsx, expo/assets/images/adaptive-icon.png
 ## [2025-02-14 18:41:03] feat(ui): implement FeedbackAnimation and OfflineIndicator banner
 - Staged: expo/assets/images/favicon.png, expo/assets/images/icon.png
+## [2025-02-14 20:27:07] feat(contexts): setup AssistantContext, AuthContext, and ProfileContext
+- Staged: expo/assets/images/splash-icon.png, expo/babel.config.js
