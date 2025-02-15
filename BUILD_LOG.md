@@ -66,3 +66,5 @@
 - Staged: expo/assets/images/splash-icon.png, expo/babel.config.js
 ## [2025-02-14 22:07:13] feat(hooks): implement useApiData, useRealtimeUpdates, and useHaptic
 - Staged: expo/bun.lock, expo/components/ErrorBoundary.tsx
+## [2025-02-15 11:20:16] feat(hooks): add useMedicalRecords, useCommunityData, and useTheme
+- Staged: expo/components/FloatingAssistantBot.tsx, expo/components/OfflineIndicator.tsx
