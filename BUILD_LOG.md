@@ -70,3 +70,5 @@
 - Staged: expo/components/FloatingAssistantBot.tsx, expo/components/OfflineIndicator.tsx
 ## [2025-02-15 13:18:00] feat(utils): implement calendarIntegration and notification scheduler
 - Staged: expo/components/community/ChallengeCard.tsx, expo/components/community/CreatePollModal.tsx
+## [2025-02-15 15:11:08] feat(utils): add offline chatPersistence and settingsPersistence
+- Staged: expo/components/community/ExpertAnswerCard.tsx, expo/components/community/GroupCard.tsx
