@@ -72,3 +72,5 @@
 - Staged: expo/components/community/ChallengeCard.tsx, expo/components/community/CreatePollModal.tsx
 ## [2025-02-15 15:11:08] feat(utils): add offline chatPersistence and settingsPersistence
 - Staged: expo/components/community/ExpertAnswerCard.tsx, expo/components/community/GroupCard.tsx
+## [2025-02-15 17:55:47] feat(utils): add imageOptimization and lazyLoading helpers
+- Staged: expo/components/community/PollCard.tsx, expo/components/community/PostCard.tsx
