@@ -68,3 +68,5 @@
 - Staged: expo/bun.lock, expo/components/ErrorBoundary.tsx
 ## [2025-02-15 11:20:16] feat(hooks): add useMedicalRecords, useCommunityData, and useTheme
 - Staged: expo/components/FloatingAssistantBot.tsx, expo/components/OfflineIndicator.tsx
+## [2025-02-15 13:18:00] feat(utils): implement calendarIntegration and notification scheduler
+- Staged: expo/components/community/ChallengeCard.tsx, expo/components/community/CreatePollModal.tsx
