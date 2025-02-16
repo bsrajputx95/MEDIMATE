@@ -76,3 +76,5 @@
 - Staged: expo/components/community/PollCard.tsx, expo/components/community/PostCard.tsx
 ## [2025-02-16 10:28:23] refactor(backend): optimize lazy DB initialization and fallback logic
 - Staged: expo/components/cura/AppointmentBookingModal.tsx, expo/components/cura/AppointmentCard.tsx
+## [2025-02-16 12:35:39] refactor(expo): polish tab transitions and haptic feedback timings
+- Staged: expo/components/cura/DoctorCard.tsx, expo/components/cura/MedicationCard.tsx
