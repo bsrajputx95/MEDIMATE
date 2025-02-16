@@ -74,3 +74,5 @@
 - Staged: expo/components/community/ExpertAnswerCard.tsx, expo/components/community/GroupCard.tsx
 ## [2025-02-15 17:55:47] feat(utils): add imageOptimization and lazyLoading helpers
 - Staged: expo/components/community/PollCard.tsx, expo/components/community/PostCard.tsx
+## [2025-02-16 10:28:23] refactor(backend): optimize lazy DB initialization and fallback logic
+- Staged: expo/components/cura/AppointmentBookingModal.tsx, expo/components/cura/AppointmentCard.tsx
