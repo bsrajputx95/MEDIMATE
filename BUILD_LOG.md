@@ -82,3 +82,5 @@
 - Staged: expo/components/cura/MedicationReminderSetup.tsx, expo/components/cura/MedicationStreakTracker.tsx
 ## [2025-02-19 14:51:54] chore: synchronize manifest and lockfile dependencies
 - Staged: expo/components/cura/TestReportCard.tsx, expo/components/cura/TreatmentPlanCard.tsx
+## [2025-02-19 16:21:31] perf(ui): memoize animated list cards in community feed
+- Staged: expo/components/food/FoodSearchModal.tsx, expo/components/health/SuggestedQuestions.tsx
