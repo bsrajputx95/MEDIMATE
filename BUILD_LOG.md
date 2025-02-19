@@ -78,3 +78,5 @@
 - Staged: expo/components/cura/AppointmentBookingModal.tsx, expo/components/cura/AppointmentCard.tsx
 ## [2025-02-16 12:35:39] refactor(expo): polish tab transitions and haptic feedback timings
 - Staged: expo/components/cura/DoctorCard.tsx, expo/components/cura/MedicationCard.tsx
+## [2025-02-19 12:37:03] perf(ui): memoize animated list cards in community feed
+- Staged: expo/components/cura/MedicationReminderSetup.tsx, expo/components/cura/MedicationStreakTracker.tsx
