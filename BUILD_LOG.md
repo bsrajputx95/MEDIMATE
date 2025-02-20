@@ -84,3 +84,5 @@
 - Staged: expo/components/cura/TestReportCard.tsx, expo/components/cura/TreatmentPlanCard.tsx
 ## [2025-02-19 16:21:31] perf(ui): memoize animated list cards in community feed
 - Staged: expo/components/food/FoodSearchModal.tsx, expo/components/health/SuggestedQuestions.tsx
+## [2025-02-20 12:59:22] refactor(hooks): add useMedicalRecords, useCommunityData, and useTheme
+- Staged: expo/components/ui/Avatar.tsx, expo/components/ui/Badge.tsx
