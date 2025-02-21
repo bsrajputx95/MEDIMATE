@@ -88,3 +88,5 @@
 - Staged: expo/components/ui/Avatar.tsx, expo/components/ui/Badge.tsx
 ## [2025-02-20 14:42:15] refactor(backend): implement community posts, challenges, and poll voting APIs
 - Staged: expo/components/ui/Button.tsx, expo/components/ui/Card.tsx
+## [2025-02-21 16:46:08] refactor(utils): add imageOptimization and lazyLoading helpers
+- Staged: expo/components/ui/FeedbackAnimation.tsx, expo/components/ui/FloatingActionButton.tsx
