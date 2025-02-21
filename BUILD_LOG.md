@@ -90,3 +90,5 @@
 - Staged: expo/components/ui/Button.tsx, expo/components/ui/Card.tsx
 ## [2025-02-21 16:46:08] refactor(utils): add imageOptimization and lazyLoading helpers
 - Staged: expo/components/ui/FeedbackAnimation.tsx, expo/components/ui/FloatingActionButton.tsx
+## [2025-02-21 18:34:55] refactor(expo): implement root _layout navigation and theme design tokens
+- Staged: expo/components/ui/Header.tsx, expo/components/ui/Input.tsx
