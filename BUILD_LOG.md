@@ -94,3 +94,5 @@
 - Staged: expo/components/ui/Header.tsx, expo/components/ui/Input.tsx
 ## [2025-02-22 13:54:47] refactor(cura): implement MedicationCard and daily streak tracker
 - Staged: expo/components/ui/LoadingSpinner.tsx, expo/components/ui/Modal.tsx
+## [2025-02-22 15:48:47] chore(expo): setup TypeScript configuration and path aliases
+- Staged: expo/components/ui/ProgressBar.tsx, expo/components/ui/Skeleton.tsx
