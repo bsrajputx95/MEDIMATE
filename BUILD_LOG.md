@@ -92,3 +92,5 @@
 - Staged: expo/components/ui/FeedbackAnimation.tsx, expo/components/ui/FloatingActionButton.tsx
 ## [2025-02-21 18:34:55] refactor(expo): implement root _layout navigation and theme design tokens
 - Staged: expo/components/ui/Header.tsx, expo/components/ui/Input.tsx
+## [2025-02-22 13:54:47] refactor(cura): implement MedicationCard and daily streak tracker
+- Staged: expo/components/ui/LoadingSpinner.tsx, expo/components/ui/Modal.tsx
