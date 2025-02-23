@@ -96,3 +96,5 @@
 - Staged: expo/components/ui/LoadingSpinner.tsx, expo/components/ui/Modal.tsx
 ## [2025-02-22 15:48:47] chore(expo): setup TypeScript configuration and path aliases
 - Staged: expo/components/ui/ProgressBar.tsx, expo/components/ui/Skeleton.tsx
+## [2025-02-23 15:19:58] refactor(community): add GroupCard, ChallengeCard, and PollCard components
+- Staged: expo/components/ui/StatCard.tsx, expo/components/ui/SwipeableTabs.tsx
