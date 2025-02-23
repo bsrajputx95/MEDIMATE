@@ -98,3 +98,5 @@
 - Staged: expo/components/ui/ProgressBar.tsx, expo/components/ui/Skeleton.tsx
 ## [2025-02-23 15:19:58] refactor(community): add GroupCard, ChallengeCard, and PollCard components
 - Staged: expo/components/ui/StatCard.tsx, expo/components/ui/SwipeableTabs.tsx
+## [2025-02-23 17:37:23] refactor(backend): define Drizzle database schema for users and records
+- Staged: expo/components/ui/TabBar.tsx, expo/components/ui/index.tsx
