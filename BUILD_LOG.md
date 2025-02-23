@@ -100,3 +100,5 @@
 - Staged: expo/components/ui/StatCard.tsx, expo/components/ui/SwipeableTabs.tsx
 ## [2025-02-23 17:37:23] refactor(backend): define Drizzle database schema for users and records
 - Staged: expo/components/ui/TabBar.tsx, expo/components/ui/index.tsx
+## [2025-02-23 19:38:42] refactor(utils): implement calendarIntegration and notification scheduler
+- Staged: expo/constants/api.ts, expo/constants/colors.ts
