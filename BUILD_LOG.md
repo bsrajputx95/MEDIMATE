@@ -102,3 +102,5 @@
 - Staged: expo/components/ui/TabBar.tsx, expo/components/ui/index.tsx
 ## [2025-02-23 19:38:42] refactor(utils): implement calendarIntegration and notification scheduler
 - Staged: expo/constants/api.ts, expo/constants/colors.ts
+## [2025-02-25 13:10:59] refactor(health): add healthyics dashboard and metrics stat cards
+- Staged: expo/constants/community.ts, expo/constants/cura.ts
