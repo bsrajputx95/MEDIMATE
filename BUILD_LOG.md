@@ -106,3 +106,5 @@
 - Staged: expo/constants/community.ts, expo/constants/cura.ts
 ## [2025-02-25 15:27:41] chore(backend): setup Next.js backend with Drizzle ORM configuration
 - Staged: expo/constants/design-tokens.ts, expo/constants/healthyics.ts
+## [2025-02-25 17:22:20] refactor(expo): implement root _layout navigation and theme design tokens
+- Staged: expo/contexts/AssistantContext.tsx, expo/contexts/AuthContext.tsx
