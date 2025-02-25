@@ -104,3 +104,5 @@
 - Staged: expo/constants/api.ts, expo/constants/colors.ts
 ## [2025-02-25 13:10:59] refactor(health): add healthyics dashboard and metrics stat cards
 - Staged: expo/constants/community.ts, expo/constants/cura.ts
+## [2025-02-25 15:27:41] chore(backend): setup Next.js backend with Drizzle ORM configuration
+- Staged: expo/constants/design-tokens.ts, expo/constants/healthyics.ts
