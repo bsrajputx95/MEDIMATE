@@ -110,3 +110,5 @@
 - Staged: expo/contexts/AssistantContext.tsx, expo/contexts/AuthContext.tsx
 ## [2025-02-26 11:17:45] refactor(community): implement PostCard and expert answer card views
 - Staged: expo/contexts/ProfileContext.tsx, expo/eas.json
+## [2025-02-26 13:47:18] chore(expo): setup TypeScript configuration and path aliases
+- Staged: expo/hooks/index.ts, expo/hooks/useAnimation.ts
