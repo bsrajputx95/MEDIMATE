@@ -112,3 +112,5 @@
 - Staged: expo/contexts/ProfileContext.tsx, expo/eas.json
 ## [2025-02-26 13:47:18] chore(expo): setup TypeScript configuration and path aliases
 - Staged: expo/hooks/index.ts, expo/hooks/useAnimation.ts
+## [2025-02-26 15:51:39] refactor(ui): implement FeedbackAnimation and OfflineIndicator banner
+- Staged: expo/hooks/useApiData.ts, expo/hooks/useCommunityData.ts
