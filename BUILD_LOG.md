@@ -108,3 +108,5 @@
 - Staged: expo/constants/design-tokens.ts, expo/constants/healthyics.ts
 ## [2025-02-25 17:22:20] refactor(expo): implement root _layout navigation and theme design tokens
 - Staged: expo/contexts/AssistantContext.tsx, expo/contexts/AuthContext.tsx
+## [2025-02-26 11:17:45] refactor(community): implement PostCard and expert answer card views
+- Staged: expo/contexts/ProfileContext.tsx, expo/eas.json
