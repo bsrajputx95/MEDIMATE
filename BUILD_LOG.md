@@ -118,3 +118,5 @@
 - Staged: expo/hooks/useCuraData.ts, expo/hooks/useHaptic.ts
 ## [2025-02-27 12:56:36] refactor(backend): add test reports and treatment plan endpoints
 - Staged: expo/hooks/useHealthData.ts, expo/hooks/useMedicalRecords.ts
+## [2025-02-27 14:07:35] refactor(backend): implement medication tracking and prescription routes
+- Staged: expo/hooks/useRealtimeUpdates.ts, expo/hooks/useTheme.ts
