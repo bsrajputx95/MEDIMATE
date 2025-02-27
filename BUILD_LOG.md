@@ -116,3 +116,5 @@
 - Staged: expo/hooks/useApiData.ts, expo/hooks/useCommunityData.ts
 ## [2025-02-27 10:43:16] refactor(cura): implement MedicationCard and daily streak tracker
 - Staged: expo/hooks/useCuraData.ts, expo/hooks/useHaptic.ts
+## [2025-02-27 12:56:36] refactor(backend): add test reports and treatment plan endpoints
+- Staged: expo/hooks/useHealthData.ts, expo/hooks/useMedicalRecords.ts
