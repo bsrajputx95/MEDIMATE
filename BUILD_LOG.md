@@ -120,3 +120,5 @@
 - Staged: expo/hooks/useHealthData.ts, expo/hooks/useMedicalRecords.ts
 ## [2025-02-27 14:07:35] refactor(backend): implement medication tracking and prescription routes
 - Staged: expo/hooks/useRealtimeUpdates.ts, expo/hooks/useTheme.ts
+## [2025-02-28 12:33:07] refactor(backend): add health metrics logging and goal tracker APIs
+- Staged: expo/hooks/useToast.ts, expo/lib/api.ts
