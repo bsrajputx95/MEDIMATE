@@ -21,7 +21,7 @@ export async function GET(request: NextRequest) {
       userName: users.name,
     }).from(posts).leftJoin(users, eq(posts.userId, users.id)).orderBy(desc(posts.createdAt)).limit(limit).offset(offset);
 
-    return NextResponse.json({ data: data.map(p => ({
+    return NextResponse.json({ data: data.map((p: any) => ({
       ...p,
       user: { name: p.isAnonymous ? 'Anonymous' : (p.userName || 'Unknown'), isAnonymous: p.isAnonymous },
     }))});

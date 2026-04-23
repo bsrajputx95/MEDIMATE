@@ -50,8 +50,13 @@
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.18.6",
+    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
     "@expo/ngrok": "^4.1.0",
     "@types/react": "~19.0.10",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-module-resolver": "^5.0.3",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "typescript": "~5.8.3"
   },
   "private": true

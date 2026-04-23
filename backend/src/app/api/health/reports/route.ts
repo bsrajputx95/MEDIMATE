@@ -24,17 +24,17 @@ export async function GET(request: NextRequest) {
       });
     }
 
-    const validSteps = metrics.filter(m => m.steps !== null && m.steps !== undefined);
-    const validHR = metrics.filter(m => m.heartRate !== null);
-    const validWater = metrics.filter(m => m.waterIntake !== null);
-    const validCalories = metrics.filter(m => m.caloriesConsumed !== null && m.caloriesConsumed !== undefined);
-    const validSleep = metrics.filter(m => m.sleepHours !== null);
+    const validSteps = metrics.filter((m: any) => m.steps !== null && m.steps !== undefined);
+    const validHR = metrics.filter((m: any) => m.heartRate !== null);
+    const validWater = metrics.filter((m: any) => m.waterIntake !== null);
+    const validCalories = metrics.filter((m: any) => m.caloriesConsumed !== null && m.caloriesConsumed !== undefined);
+    const validSleep = metrics.filter((m: any) => m.sleepHours !== null);
 
-    const avgSteps = validSteps.length > 0 ? Math.round(validSteps.reduce((s, m) => s + (m.steps || 0), 0) / validSteps.length) : 0;
-    const avgHeartRate = validHR.length > 0 ? Math.round(validHR.reduce((s, m) => s + (m.heartRate || 0), 0) / validHR.length) : 0;
-    const avgWater = validWater.length > 0 ? parseFloat((validWater.reduce((s, m) => s + parseFloat(m.waterIntake || '0'), 0) / validWater.length).toFixed(1)) : 0;
-    const avgCalories = validCalories.length > 0 ? Math.round(validCalories.reduce((s, m) => s + (m.caloriesConsumed || 0), 0) / validCalories.length) : 0;
-    const avgSleep = validSleep.length > 0 ? parseFloat((validSleep.reduce((s, m) => s + parseFloat(m.sleepHours || '0'), 0) / validSleep.length).toFixed(1)) : 0;
+    const avgSteps = validSteps.length > 0 ? Math.round(validSteps.reduce((s: any, m: any) => s + (m.steps || 0), 0) / validSteps.length) : 0;
+    const avgHeartRate = validHR.length > 0 ? Math.round(validHR.reduce((s: any, m: any) => s + (m.heartRate || 0), 0) / validHR.length) : 0;
+    const avgWater = validWater.length > 0 ? parseFloat((validWater.reduce((s: any, m: any) => s + parseFloat(m.waterIntake || '0'), 0) / validWater.length).toFixed(1)) : 0;
+    const avgCalories = validCalories.length > 0 ? Math.round(validCalories.reduce((s: any, m: any) => s + (m.caloriesConsumed || 0), 0) / validCalories.length) : 0;
+    const avgSleep = validSleep.length > 0 ? parseFloat((validSleep.reduce((s: any, m: any) => s + parseFloat(m.sleepHours || '0'), 0) / validSleep.length).toFixed(1)) : 0;
 
     let healthScore = 50;
     if (avgSteps >= 8000) healthScore += 15; else if (avgSteps >= 5000) healthScore += 10; else if (avgSteps > 0) healthScore += 5;
