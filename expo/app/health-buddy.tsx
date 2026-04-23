@@ -13,8 +13,6 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Stack } from 'expo-router';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { Stack } from 'expo-router';
 import { COLORS, SPACING, RADIUS, FONT_SIZES, FONT_WEIGHTS, SHADOWS } from '@/constants/design-tokens';
 import { API_BASE_URL } from '@/constants/api';
 import {
