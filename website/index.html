@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>MediMate — Book Your Doctor Any Time Anywhere</title>
+<meta name="description" content="MediMate responsive interactive doctor booking website. Hard-coded, fast, no empty states." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%236C4DF6'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>+</text></svg>" />
+</head>
+<body>
+<div class="bg-scene" aria-hidden="true">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+  <div class="grid-overlay"></div>
+  <div class="float-shape s1"></div>
+  <div class="float-shape s2"></div>
+  <div class="float-shape s3"></div>
+</div>
+<div id="cursorGlow"></div>
+<div id="toastWrap"></div>
+
+<!-- TOP NAV -->
+<header class="nav" id="topNav">
+  <div class="nav-inner">
+    <a href="#home" class="logo tap" data-tilt-sm>
+      <span class="logo-mark">✚</span>
+      <span class="logo-text">Medi<b>Mate</b></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="tap active" data-nav="home">Home</a>
+      <a href="#doctors" class="tap" data-nav="doctors">Doctors</a>
+      <a href="#appointments" class="tap" data-nav="appointments">Appointments</a>
+      <a href="#saved" class="tap" data-nav="saved">Saved</a>
+      <a href="#chat" class="tap" data-nav="chat">Chat</a>
+      <a href="#doctor-profile" class="tap" data-nav="doctor-profile">Profile</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn tap" id="searchToggleBtn" aria-label="Search">⌕</button>
+      <button class="icon-btn tap has-dot" id="notifBtn" aria-label="Notifications">🔔</button>
+      <a href="#home" class="btn-primary tap magnetic" id="getStartedTop">Get Started →</a>
+      <button class="hamburger tap" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-search" id="navSearch">
+    <span>⌕</span>
+    <input id="globalSearch" type="text" placeholder="Looking for Doctors? Search by name or department…" autocomplete="off" />
+    <button class="tap" id="clearSearch">✕</button>
+  </div>
+</header>
+
+<main>
+<!-- ============ HERO / ONBOARDING ============ -->
+<section id="home" class="hero section">
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <div class="hero-badges">
+        <div class="mini-card tilt tap" data-tilt>✓ &nbsp; Caring from Afar.<br><b>Your health, our priority</b></div>
+        <div class="mini-card ghost">Discover trusted doctors, book slots, access prescriptions, and get care.</div>
+      </div>
+      <h1 class="h1">Book Your Doctor <span class="grad">Any Time</span> Any where!</h1>
+      <p class="sub">Purple-premium care OS — search doctors, grab <b>15% EXTRA discount</b> on first consultation, track recent visits, chat + video call, all hard-coded and instant. No loading, no empty screens.</p>
+      <div class="cta-row">
+        <button class="btn-primary big tap magnetic" data-book-doctor="Dr. Weber Micheal">Get Started</button>
+        <button class="btn-ghost big tap magnetic" id="demoCallBtn"><span class="play">▶</span> Live video demo</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat tap" data-tilt-sm><b data-count="12480">12,480</b><span>Happy patients</span></div>
+        <div class="stat tap" data-tilt-sm><b>4.8 ★</b><span>Avg rating (6k)</span></div>
+        <div class="stat tap" data-tilt-sm><b data-count="320">320+</b><span>Specialists online</span></div>
+      </div>
+      <div class="avatar-stack tap">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="patient" loading="lazy" onerror="this.style.display='none'"/>
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="patient" loading="lazy" onerror="this.style.display='none'"/>
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="patient" loading="lazy" onerror="this.style.display='none'"/>
+        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="patient" loading="lazy" onerror="this.style.display='none'"/>
+        <span class="more">12k+</span>
+        <em>trusted by patients worldwide</em>
+      </div>
+    </div>
+
+    <div class="hero-phones reveal" id="heroPhones">
+      <!-- Main phone replica -->
+      <div class="phone main-phone tilt" data-tilt>
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="app-top">
+            <div class="user-row">
+              <img class="avatar" src="https://randomuser.me/api/portraits/men/11.jpg" alt="Kevin Merico" onerror="this.src='data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><circle cx=%2750%27 cy=%2750%27 r=%2750%27 fill=%27%236C4DF6%27/><text x=%2750%27 y=%2765%27 font-size=%2740%27 text-anchor=%27middle%27 fill=%27white%27>K</text></svg>'"/>
+              <div><small>Hello</small><b>Kevin Merico!</b></div>
+              <span class="grid-icon tap">⁞⁞</span>
+            </div>
+            <label class="app-search tap"><b>Looking for Doctors?</b><span>Search by name or department</span><i>⌕</i></label>
+            <div class="promo-carousel" id="promoCarousel">
+              <div class="promo-track">
+                <div class="promo-slide active">
+                  <div class="promo-text"><span class="off"><b>15%</b> EXTRA<br>DISCOUNT</span><p>Get your first consultation absolutely free!</p><button class="tap" data-book-doctor="Dr. Weber Micheal">Get Now</button></div>
+                  <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&q=80&auto=format&fit=crop" alt="Doctor" loading="lazy" onerror="this.style.display='none'"/>
+                </div>
+                <div class="promo-slide">
+                  <div class="promo-text"><span class="off"><b>24/7</b> VIDEO<br>CARE</span><p>Instant video call with Neurology experts!</p><button class="tap" id="promoVideoBtn">Call Now</button></div>
+                  <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&q=80&auto=format&fit=crop" alt="Doctor" loading="lazy" onerror="this.style.display='none'"/>
+                </div>
+                <div class="promo-slide">
+                  <div class="promo-text"><span class="off"><b>FREE</b> LAB<br>REPORT</span><p>Upload prescriptions, get digital reports!</p><button class="tap" data-goto="doctors">Explore</button></div>
+                  <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&q=80&auto=format&fit=crop" alt="Doctor" loading="lazy" onerror="this.style.display='none'"/>
+                </div>
+              </div>
+              <div class="dots"><span class="on"></span><span></span><span></span></div>
+            </div>
+            <div class="spec-row">
+              <button class="spec tap active">🫀<span>Cardiology</span></button>
+              <button class="spec tap">📍<span>Paediatrics</span></button>
+              <button class="spec tap">🩺<span>Urology</span></button>
+              <button class="spec tap">🔬<span>Oncology</span></button>
+              <button class="spec tap">🧴<span>Dermatology</span></button>
+            </div>
+            <div class="row-head"><b>My Recent Visit</b><a class="tap" data-goto="doctors">See All</a></div>
+            <div class="visit-card tap" data-tilt-sm data-open-profile="Dr. Weber Micheal">
+              <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&q=80&auto=format&fit=crop" alt="Dr Weber" loading="lazy" onerror="this.style.display='none'"/>
+              <div><b>Dr. Weber Micheal</b><small>⭐ 5.0 (1120)</small><span class="tag">🧠 Neurology<br>Specialist · 6+ years</span></div>
+              <span class="chat-ic">💬</span>
+            </div>
+            <div class="row-head"><b>My Checkup Schedule</b><a class="tap" data-goto="appointments">See All</a></div>
+            <div class="sched-mini tap" data-goto="appointments"><span>🩺 Clinic Visit — Today 2:00 PM</span><i>→</i></div>
+          </div>
+        </div>
+      </div>
+      <!-- trust chips under phone -->
+      <div class="phone-trust reveal">
+        <span class="tap" data-toast="✓ All doctors are PMDC verified">✓ Verified doctors</span>
+        <span class="tap" data-book-doctor="Dr. Weber Micheal">✓ 15% off first visit</span>
+        <span class="tap" data-toast="Free cancellation up to 2h before your slot">✓ Free cancellation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPECIALTIES + HOME APP ============ -->
+<section class="section tight" id="app-home">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div><p class="eyebrow">● Live home feed — hard-coded</p><h2>Hello Kevin Merico! 👋</h2><p class="muted">Looking for Doctors? Search by name or department. Tap anything — everything responds.</p></div>
+      <div class="filter-pills" id="specialtyPills">
+        <button class="pill tap active" data-spec="all">All</button>
+        <button class="pill tap" data-spec="Cardiology">🫀 Cardiology</button>
+        <button class="pill tap" data-spec="Paediatrics">📍 Paediatrics</button>
+        <button class="pill tap" data-spec="Urology">🩺 Urology</button>
+        <button class="pill tap" data-spec="Oncology">🔬 Oncology</button>
+        <button class="pill tap" data-spec="Dermatology">🧴 Dermatology</button>
+        <button class="pill tap" data-spec="Neurology">🧠 Neurology</button>
+        <button class="pill tap" data-spec="Radiology">🦴 Radiology</button>
+      </div>
+    </div>
+
+    <div class="home-grid">
+      <div class="card glass tilt reveal" data-tilt>
+        <div class="row-head"><b>My Recent Visit</b><button class="link tap" data-goto="doctors">See All</button></div>
+        <div class="h-scroll" id="recentVisits">
+          <article class="visit-lg tap" data-tilt-sm data-open-profile="Dr. Weber Micheal" data-spec-card="Neurology">
+            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&q=80&auto=format&fit=crop" alt="Weber" loading="lazy" onerror="this.style.display='none'"/>
+            <div class="visit-body"><b>Dr. Weber Micheal</b><small>⭐ 5.0 (1120)</small><span class="tag">🧠 Neurology Specialist · 6+ years</span><div class="visit-foot"><span>$85 / session</span><button class="tap" data-book-doctor="Dr. Weber Micheal">Book</button></div></div>
+          </article>
+          <article class="visit-lg tap" data-tilt-sm data-open-profile="Dr. Sarah Johnson" data-spec-card="Radiology">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&q=80&auto=format&fit=crop" alt="Sarah" loading="lazy" onerror="this.style.display='none'"/>
+            <div class="visit-body"><b>Dr. Sarah Johnson</b><small>⭐ 4.8 (940)</small><span class="tag">🦴 Radiology Specialist · 8+ years</span><div class="visit-foot"><span>$120 / session</span><button class="tap" data-book-doctor="Dr. Sarah Johnson">Book</button></div></div>
+          </article>
+          <article class="visit-lg tap" data-tilt-sm data-open-profile="Dr. Luca Thompson" data-spec-card="Cardiology">
+            <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&q=80&auto=format&fit=crop" alt="Luca" loading="lazy" onerror="this.style.display='none'"/>
+            <div class="visit-body"><b>Dr. Luca Thompson</b><small>⭐ 4.9 (1502)</small><span class="tag">🫀 Cardiology Specialist · 12+ years</span><div class="visit-foot"><span>$150 / session</span><button class="tap" data-book-doctor="Dr. Luca Thompson">Book</button></div></div>
+          </article>
+        </div>
+      </div>
+      <div class="card glass tilt reveal" data-tilt>
+        <div class="row-head"><b>My Checkup Schedule</b><button class="link tap" data-goto="appointments">See All</button></div>
+        <ul class="schedule-list" id="scheduleList">
+          <li class="tap" data-book-doctor="Dr. Weber Micheal"><span class="ic">🏠</span><div><b>Clinic Visit — Dr. Weber Micheal</b><small>Today · 2:00 PM · Room 205</small></div><i>→</i></li>
+          <li class="tap" data-book-doctor="Dr. Elizabeth Blackwell"><span class="ic">📅</span><div><b>Video — Dr. Elizabeth Blackwell</b><small>Today · 12:20 PM · Neurology</small></div><i>→</i></li>
+          <li class="tap" data-book-doctor="Dr. Sofia Martinez"><span class="ic">💜</span><div><b>Follow-up — Dr. Sofia Martinez</b><small>Fri · 10:30 AM · Dermatology</small></div><i>→</i></li>
+          <li class="tap" data-book-doctor="Dr. Michael Chen"><span class="ic">👤</span><div><b>Lab Review — Dr. Michael Chen</b><small>Sat · 9:15 AM · General</small></div><i>→</i></li>
+        </ul>
+        <div class="bottom-tabs">
+          <span class="tap active">🏠</span><span class="tap" data-goto="appointments">📅</span><span class="tap" data-goto="saved">💜</span><span class="tap" data-goto="chat">💬</span><span class="tap" data-goto="doctor-profile">👤</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section tight" id="how">
+  <div class="container">
+    <div class="sec-head reveal"><div><p class="eyebrow">● Simple as 1 · 2 · 3</p><h2>How MediMate works</h2><p class="muted">From search to video call in under two minutes — every step below is tappable.</p></div></div>
+    <div class="steps">
+      <article class="step-card tilt tap reveal" data-tilt><span class="num">1</span><div class="step-ic">🔍</div><h3>Search & compare</h3><p>Filter 8 specialists by department, rating and fee. Real profiles, real reviews, no surprises — try the search up top.</p><button class="btn-ghost tap" data-goto="doctors">Browse doctors →</button></article>
+      <article class="step-card tilt tap reveal" data-tilt><span class="num">2</span><div class="step-ic">📅</div><h3>Book instantly</h3><p>Pick a slot — Today 2:00 PM, Fri 1:00 PM or Sat 9:15 AM. Video or clinic visit, 15% off your first consultation.</p><button class="btn-ghost tap" data-book-doctor="Dr. Weber Micheal">Book a slot →</button></article>
+      <article class="step-card tilt tap reveal" data-tilt><span class="num">3</span><div class="step-ic">📹</div><h3>Meet & follow up</h3><p>Chat free before your visit, join by video, get prescriptions and lab reports in the app. 2/3 pre-visit tasks done already!</p><button class="btn-ghost tap" data-video-doctor="Dr. Elizabeth Blackwell">Try video demo →</button></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOCTORS ============ -->
+<section id="doctors" class="section">
+  <div class="container">
+    <div class="sec-head reveal"><div><p class="eyebrow">● Top specialists — tap to book / save / chat</p><h2>Meet our doctors</h2><p class="muted"><span id="docCount">8</span> doctors online now. Search + specialty pills filter instantly (all hard-coded).</p></div>
+    <div class="doc-search"><span>⌕</span><input id="doctorSearch" placeholder="Search Dr. Weber, Neurology, Cardiology…" /><button class="btn-primary tap" id="findBtn">Find</button></div></div>
+    <div class="doc-grid" id="doctorGrid">
+      <!-- cards injected + hard-coded fallback -->
+      <article class="doc-card tilt tap reveal" data-tilt data-spec-card="Neurology" data-name="Dr. Weber Micheal">
+        <div class="doc-media"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=500&q=80&auto=format&fit=crop" alt="Dr Weber Micheal" loading="lazy" onerror="this.style.display='none'"/><span class="online">● Online</span><button class="heart tap saved" data-save="Dr. Weber Micheal" aria-label="save">♥</button></div>
+        <div class="doc-body"><small class="spec-tag">🧠 Neurology</small><h3>Dr. Weber Micheal</h3><p>⭐ 5.0 (1120) · 12 years</p><p class="fee">$85 <span>/session</span></p><div class="doc-btns"><button class="btn-primary tap" data-book-doctor="Dr. Weber Micheal">Book Now</button><button class="btn-ghost tap" data-open-profile="Dr. Weber Micheal">Profile</button><button class="btn-ghost tap" data-chat-doctor="Dr. Weber Micheal">💬</button></div></div>
+      </article>
+      <article class="doc-card tilt tap reveal" data-tilt data-spec-card="Neurology" data-name="Dr. Elizabeth Blackwell">
+        <div class="doc-media"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=500&q=80&auto=format&fit=crop" alt="Dr Elizabeth Blackwell" loading="lazy" onerror="this.style.display='none'"/><span class="online">● Online</span><button class="heart tap" data-save="Dr. Elizabeth Blackwell" aria-label="save">♥</button></div>
+        <div class="doc-body"><small class="spec-tag">🧠 Neurology</small><h3>Dr. Elizabeth Blackwell</h3><p>⭐ 4.8 (2100) · 15 years</p><p class="fee">$65 <span>/session</span></p><div class="doc-btns"><button class="btn-primary tap" data-book-doctor="Dr. Elizabeth Blackwell">Book Now</button><button class="btn-ghost tap" data-open-profile="Dr. Elizabeth Blackwell">Profile</button><button class="btn-ghost tap" data-chat-doctor="Dr. Elizabeth Blackwell">💬</button></div></div>
+      </article>
+      <article class="doc-card tilt tap reveal" data-tilt data-spec-card="Cardiology" data-name="Dr. Luca Thompson">
+        <div class="doc-media"><img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=500&q=80&auto=format&fit=crop" alt="Dr Luca Thompson" loading="lazy" onerror="this.style.display='none'"/><span class="online">● Online</span><button class="heart tap" data-save="Dr. Luca Thompson" aria-label="save">♥</button></div>
+        <div class="doc-body"><small class="spec-tag">🫀 Cardiology</small><h3>Dr. Luca Thompson</h3><p>⭐ 4.9 (1502) · 12 years</p><p class="fee">$150 <span>/session</span></p><div class="doc-btns"><button class="btn-primary tap" data-book-doctor="Dr. Luca Thompson">Book Now</button><button class="btn-ghost tap" data-open-profile="Dr. Luca Thompson">Profile</button><button class="btn-ghost tap" data-chat-doctor="Dr. Luca Thompson">💬</button></div></div>
+      </article>
+      <article class="doc-card tilt tap reveal" data-tilt data-spec-card="Dermatology" data-name="Dr. Sofia Martinez">
+        <div class="doc-media"><img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=500&q=80&auto=format&fit=crop" alt="Dr Sofia Martinez" loading="lazy" onerror="this.style.display='none'"/><span class="online orange">● In 2 days</span><button class="heart tap saved" data-save="Dr. Sofia Martinez" aria-label="save">♥</button></div>
+        <div class="doc-body"><small class="spec-tag">🧴 Dermatology</small><h3>Dr. Sofia Martinez</h3><p>⭐ 4.7 (860) · 10 years</p><p class="fee">$180 <span>/session</span></p><div class="doc-btns"><button class="btn-primary tap" data-book-doctor="Dr. Sofia Martinez">Book Now</button><button class="btn-ghost tap" data-open-profile="Dr. Sofia Martinez">Profile</button><button class="btn-ghost tap" data-chat-doctor="Dr. Sofia Martinez">💬</button></div></div>
+      </article>
+      <article class="doc-card tilt tap reveal" data-tilt data-spec-card="Paediatrics" data-name="Dr. Michael Chen">
+        <div class="doc-media"><img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=500&q=80&auto=format&fit=crop" alt="Dr Michael Chen" loading="lazy" onerror="this.style.display='none'"/><span class="online">● Online</span><button class="heart tap" data-save="Dr. Michael Chen" aria-label="save">♥</button></div>
+        <div class="doc-body"><small class="spec-tag">📍 Paediatrics</small><h3>Dr. Michael Chen</h3><p>⭐ 4.9 (1104) · 12 years</p><p class="fee">$120 <span>/session</span></p><div class="doc-btns"><button class="btn-primary tap" data-book-doctor="Dr. Michael Chen">Book Now</button><button class="btn-ghost tap" data-open-profile="Dr. Michael Chen">Profile</button><button class="btn-ghost tap" data-chat-doctor="Dr. Michael Chen">💬</button></div></div>
+      </article>
+      <article class="doc-card tilt tap reveal" data-tilt data-spec-card="Oncology" data-name="Dr. Amara Osei">
+        <div class="doc-media"><img src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?w=500&q=80&auto=format&fit=crop" alt="Dr Amara Osei" loading="lazy" onerror="this.style.display='none'"/><span class="online">● Online</span><button class="heart tap" data-save="Dr. Amara Osei" aria-label="save">♥</button></div>
+        <div class="doc-body"><small class="spec-tag">🔬 Oncology</small><h3>Dr. Amara Osei</h3><p>⭐ 4.9 (730) · 14 years</p><p class="fee">$190 <span>/session</span></p><div class="doc-btns"><button class="btn-primary tap" data-book-doctor="Dr. Amara Osei">Book Now</button><button class="btn-ghost tap" data-open-profile="Dr. Amara Osei">Profile</button><button class="btn-ghost tap" data-chat-doctor="Dr. Amara Osei">💬</button></div></div>
+      </article>
+      <article class="doc-card tilt tap reveal" data-tilt data-spec-card="Urology" data-name="Dr. James Park">
+        <div class="doc-media"><img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Dr James Park" loading="lazy" onerror="this.style.display='none'"/><span class="online">● Online</span><button class="heart tap" data-save="Dr. James Park" aria-label="save">♥</button></div>
+        <div class="doc-body"><small class="spec-tag">🩺 Urology</small><h3>Dr. James Park</h3><p>⭐ 4.6 (540) · 9 years</p><p class="fee">$110 <span>/session</span></p><div class="doc-btns"><button class="btn-primary tap" data-book-doctor="Dr. James Park">Book Now</button><button class="btn-ghost tap" data-open-profile="Dr. James Park">Profile</button><button class="btn-ghost tap" data-chat-doctor="Dr. James Park">💬</button></div></div>
+      </article>
+      <article class="doc-card tilt tap reveal" data-tilt data-spec-card="Radiology" data-name="Dr. Sarah Johnson">
+        <div class="doc-media"><img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Dr Sarah Johnson" loading="lazy" onerror="this.style.display='none'"/><span class="online orange">● Tomorrow</span><button class="heart tap" data-save="Dr. Sarah Johnson" aria-label="save">♥</button></div>
+        <div class="doc-body"><small class="spec-tag">🦴 Radiology</small><h3>Dr. Sarah Johnson</h3><p>⭐ 4.8 (940) · 15 years</p><p class="fee">$150 <span>/session</span></p><div class="doc-btns"><button class="btn-primary tap" data-book-doctor="Dr. Sarah Johnson">Book Now</button><button class="btn-ghost tap" data-open-profile="Dr. Sarah Johnson">Profile</button><button class="btn-ghost tap" data-chat-doctor="Dr. Sarah Johnson">💬</button></div></div>
+      </article>
+    </div>
+    <p class="empty hidden" id="noDocs">No doctors match “<span id="noDocsQ"></span>” — try “Weber” or “Cardiology”. <button class="link tap" id="resetDocs">Reset</button></p>
+  </div>
+</section>
+
+<!-- ============ APPOINTMENTS ============ -->
+<section id="appointments" class="section">
+  <div class="container">
+    <div class="sec-head reveal"><div><p class="eyebrow">● Appointments — pick a day, join video</p><h2>Appointments</h2></div><button class="btn-primary tap magnetic" data-book-doctor="Dr. Weber Micheal">+ New booking</button></div>
+    <div class="card glass reveal">
+      <div class="day-strip" id="dayStrip">
+        <button class="day tap" data-day="TUE 27"><span>TUE</span><b>27</b></button>
+        <button class="day tap" data-day="Wed 28"><span>Wed</span><b>28</b></button>
+        <button class="day tap" data-day="Thu 29"><span>Thu</span><b>29</b></button>
+        <button class="day tap active" data-day="Fri 30"><span>Fri</span><b>30</b></button>
+        <button class="day tap" data-day="Sat 1"><span>Sat</span><b>1</b></button>
+        <button class="day tap" data-day="Sun 2"><span>Sun</span><b>2</b></button>
+        <button class="day tap" data-day="Mon 3"><span>Mon</span><b>3</b></button>
+      </div>
+      <div id="apptList">
+        <article class="appt tilt tap reveal" data-tilt-sm>
+          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&q=80&auto=format&fit=crop" alt="Weber" loading="lazy" onerror="this.style.display='none'"/>
+          <div class="appt-main"><h3>Dr. Weber Micheal</h3><p>⭐ 5.0 (1120) · Video via flex call</p><div class="tasks"><span>Pre-visit tasks</span><b>2/3 Done</b></div><div class="bar"><i style="width:66%"></i></div><small class="tag">🧠 Neurology Specialist · 6+ years</small></div>
+          <div class="appt-side"><button class="icon-btn tap" data-chat-doctor="Dr. Weber Micheal">💬</button><button class="icon-btn tap" data-video-doctor="Dr. Weber Micheal">📹</button><button class="btn-primary tap sm" data-book-doctor="Dr. Weber Micheal">Join</button></div>
+        </article>
+        <article class="appt tilt tap reveal" data-tilt-sm>
+          <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=300&q=80&auto=format&fit=crop" alt="Luca" loading="lazy" onerror="this.style.display='none'"/>
+          <div class="appt-main"><h3>Dr. Luca Thompson — Radiology</h3><p>⭐ 5.0 (1120) · Video via flex call</p><div class="tasks"><span>Pre-visit tasks</span><b>2/3 Done</b></div><div class="bar"><i style="width:66%"></i></div><small class="tag">🦴 Radiology Specialist · 6+ years</small></div>
+          <div class="appt-side"><button class="icon-btn tap" data-chat-doctor="Dr. Luca Thompson">💬</button><button class="icon-btn tap" data-video-doctor="Dr. Luca Thompson">📹</button><button class="btn-primary tap sm" data-book-doctor="Dr. Luca Thompson">Join</button></div>
+        </article>
+        <article class="appt tilt tap reveal" data-tilt-sm>
+          <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=300&q=80&auto=format&fit=crop" alt="Sofia" loading="lazy" onerror="this.style.display='none'"/>
+          <div class="appt-main"><h3>Dr. Sofia Martinez — Dermatology</h3><p>⭐ 4.7 (860) · Clinic visit</p><div class="tasks"><span>Pre-visit tasks</span><b>3/3 Done</b></div><div class="bar"><i style="width:100%"></i></div><small class="tag">🧴 Dermatology Specialist · 10+ years</small></div>
+          <div class="appt-side"><button class="icon-btn tap" data-chat-doctor="Dr. Sofia Martinez">💬</button><button class="icon-btn tap" data-video-doctor="Dr. Sofia Martinez">📹</button><button class="btn-primary tap sm" data-book-doctor="Dr. Sofia Martinez">Join</button></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SAVED ============ -->
+<section id="saved" class="section">
+  <div class="container">
+    <div class="sec-head reveal"><div><p class="eyebrow">● Saved doctors — tap ♥ to save / unsave</p><h2>Saved</h2><p class="muted"><span id="savedCount">3</span> saved · $150 Today, 2:00 PM slots ready</p></div></div>
+    <div class="saved-list" id="savedList">
+      <article class="saved-card tilt tap reveal" data-tilt data-name="Dr. Weber Micheal">
+        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&q=80&auto=format&fit=crop" alt="Weber" loading="lazy" onerror="this.style.display='none'"/>
+        <div><h3>Dr. Weber Micheal</h3><small class="spec-tag">Neurology</small><p>⭐ 5.0 (1120)</p><b class="price">$150</b> <small>Today, 2:00 PM</small></div>
+        <div class="col"><button class="icon-btn tap" data-chat-doctor="Dr. Weber Micheal">💬</button><button class="heart tap saved" data-save="Dr. Weber Micheal">♥</button></div>
+      </article>
+      <article class="saved-card tilt tap reveal" data-tilt data-name="Dr. Luca Thompson">
+        <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=300&q=80&auto=format&fit=crop" alt="Luca" loading="lazy" onerror="this.style.display='none'"/>
+        <div><h3>Dr. Luca Thompson</h3><small class="spec-tag">Radiology</small><p>⭐ 5.0 (1120)</p><b class="price">$160</b> <small>Today, 2:00 PM</small></div>
+        <div class="col"><button class="icon-btn tap" data-chat-doctor="Dr. Luca Thompson">💬</button><button class="heart tap saved" data-save="Dr. Luca Thompson">♥</button></div>
+      </article>
+      <article class="saved-card tilt tap reveal" data-tilt data-name="Dr. Sofia Martinez">
+        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=300&q=80&auto=format&fit=crop" alt="Sofia" loading="lazy" onerror="this.style.display='none'"/>
+        <div><h3>Dr. Sofia Martinez</h3><small class="spec-tag">Neurology</small><p>⭐ 5.0 (1120)</p><b class="price">$150</b> <small>Today, 2:00 PM</small></div>
+        <div class="col"><button class="icon-btn tap" data-chat-doctor="Dr. Sofia Martinez">💬</button><button class="heart tap saved" data-save="Dr. Sofia Martinez">♥</button></div>
+      </article>
+    </div>
+    <p class="empty hidden" id="noSaved">Nothing saved yet — tap ♥ on any doctor to add them here.</p>
+  </div>
+</section>
+
+<!-- ============ CHAT + VIDEO ============ -->
+<section id="chat" class="section">
+  <div class="container">
+    <div class="sec-head reveal"><div><p class="eyebrow">● Chat — hard-coded replies, instant send</p><h2>Dr. Weber M <span class="online-dot">● Online</span></h2></div><button class="btn-primary tap" data-video-doctor="Dr. Weber Micheal">📹 Start video call</button></div>
+    <div class="chat-shell tilt reveal" data-tilt>
+      <aside class="chat-list">
+        <button class="chat-person tap active" data-chat-doctor="Dr. Weber Micheal"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200&q=80&auto=format&fit=crop" alt="" loading="lazy" onerror="this.style.display='none'"/><div><b>Dr. Weber M</b><small>Online · Neurology</small></div><span class="unread">2</span></button>
+        <button class="chat-person tap" data-chat-doctor="Dr. Elizabeth Blackwell"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200&q=80&auto=format&fit=crop" alt="" loading="lazy" onerror="this.style.display='none'"/><div><b>Dr. Elizabeth B.</b><small>Online · 12:20 call</small></div><span class="unread">1</span></button>
+        <button class="chat-person tap" data-chat-doctor="Dr. Luca Thompson"><img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=200&q=80&auto=format&fit=crop" alt="" loading="lazy" onerror="this.style.display='none'"/><div><b>Dr. Luca T.</b><small>Radiology · typing…</small></div></button>
+      </aside>
+      <div class="chat-main">
+        <div class="chat-head"><span>‹</span><img id="chatAvatar" src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200&q=80&auto=format&fit=crop" alt="" onerror="this.style.display='none'"/><div><b id="chatName">Dr. Weber M</b><small class="online">Online</small></div><span class="dots tap">⋮</span></div>
+        <div class="chat-body" id="chatBody">
+          <div class="day-chip">Today, 2:00 PM</div>
+          <div class="msg in">Hello guys, we have discussed about post-corona vacation plan and our decision is to go to Bali. We will have a very big party after this corona ends! These are some images about our destination <span class="time">10:04 PM</span></div>
+          <div class="msg out">Maria's vaccination is due next month, I've sent the appointment options to your app. Please confirm your preferred time. <span class="time">16:04 PM ✓✓</span></div>
+          <div class="msg in">Your appointment has been rescheduled to Friday, March 17th at 1:00 PM due to doctor availability <span class="time">16:04 PM</span></div>
+          <div class="msg out">“Good morning Marie! For your child's appointment, please bring their vaccination record and a list of any concerns you'd like to discuss <span class="time">16:05 PM ✓✓</span></div>
+        </div>
+        <div class="quick tap-row">
+          <button class="tap" data-quick="Confirm Friday 1:00 PM ✓">Confirm Friday ✓</button>
+          <button class="tap" data-quick="Please reschedule to Saturday">Reschedule</button>
+          <button class="tap" data-quick="Thanks doctor! 🙏">Thanks 🙏</button>
+        </div>
+        <form class="chat-input" id="chatForm"><input id="chatText" placeholder="Type a message…" autocomplete="off"/><button class="tap" type="submit" aria-label="Send">➤</button></form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOCTOR PROFILE ============ -->
+<section id="doctor-profile" class="section">
+  <div class="container">
+    <div class="sec-head reveal"><div><p class="eyebrow">● Doctor profile — info / availability / education</p><h2>Doctor details</h2></div></div>
+    <div class="profile-grid">
+      <div class="card glass tilt reveal profile-card" data-tilt>
+        <div class="prof-top"><span class="back tap" data-goto="doctors">‹</span><span class="spacer"></span><button class="heart tap saved" data-save="Dr. Weber Micheal">♡</button></div>
+        <small class="spec-tag">Neurology</small>
+        <h2 id="profName">Dr. Weber Micheal</h2>
+        <p class="fee big">$85 <span>/session</span></p>
+        <img class="prof-img tap" id="profImg" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80&auto=format&fit=crop" alt="Doctor profile" loading="lazy" onerror="this.style.display='none'"/>
+        <div class="prof-stats">
+          <div class="tap"><span>👜</span><small>Experience</small><b>12 years</b></div>
+          <div class="tap"><span>◎</span><small>Rating</small><b>4.8</b></div>
+          <div class="tap"><span>👥</span><small>Reviews</small><b>1000+</b></div>
+        </div>
+        <div class="tabs tap-row">
+          <button class="tap active" data-tab="info">Info</button>
+          <button class="tap" data-tab="avail">Availability</button>
+          <button class="tap" data-tab="edu">Education</button>
+        </div>
+        <div class="tab-panels">
+          <p id="tab-info">Dr. Weber Micheal is a board-certified neurologist with 12 years of experience treating migraines, epilepsy, sleep disorders and nerve pain. 1,408 patients attended · 5.0 rating from 1,120 reviews. <b>At a Glance</b> — great with first-time visitors, speaks English & Spanish, replies within ~10 mins.</p>
+          <p id="tab-avail" class="hidden">Mon–Sat · 9:00 AM – 6:00 PM · Video + Clinic · Next slot <b>Today 2:00 PM</b>. Emergency video in ~12 mins.</p>
+          <p id="tab-edu" class="hidden">MD Neurology, Fellowship in Epilepsy · 12 Nov 2023 joined · 1408 patients attended · PMDC verified.</p>
+        </div>
+        <div class="glance">
+          <div><small>Consultation Fee</small><b>$65 <span>(include VAT)</span></b></div>
+          <div><small>Follow-Up Fee</small><b>$40 <span>(within 30d)</span></b></div>
+          <div><small>Patients Attended</small><b>1408</b></div>
+          <div><small>Joined FlexDoc</small><b>12 Nov 2023</b></div>
+        </div>
+        <button class="btn-primary big tap magnetic full" data-book-doctor="Dr. Weber Micheal">Next → Book $85 session</button>
+      </div>
+      <div class="video-card tilt reveal" data-tilt>
+        <div class="video-top"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80&auto=format&fit=crop" alt="Elizabeth" loading="lazy" onerror="this.style.display='none'"/><span class="live">● LIVE 12:20</span></div>
+        <div class="video-info"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="" loading="lazy" onerror="this.style.display='none'"/><div><b>Dr. Elizabeth Blackwell</b><small>Physician Assistant (Neurology)</small></div><span class="timer" id="callTimer">12:20</span></div>
+        <div class="video-controls"><button class="tap" data-toast="🎙 Mic muted">🎙</button><button class="tap" data-toast="📹 Camera off">📹</button><button class="tap end" data-video-doctor="Dr. Elizabeth Blackwell">📞</button><button class="tap" data-toast="••• More options">•••</button><button class="tap" data-chat-doctor="Dr. Elizabeth Blackwell">💬</button></div>
+        <div class="presc"><b>💊 Active prescription</b><p>Lisinopril 10mg — once daily · Metformin 500mg — twice daily · Vitamin D3 — daily</p><button class="btn-ghost tap" data-toast="📄 Report downloaded (demo)">Download report</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="section tight" id="reviews">
+  <div class="container">
+    <div class="sec-head reveal"><div><p class="eyebrow">● 12,480+ happy patients · 4.8 average</p><h2>Patients love MediMate</h2><p class="muted">Real stories from Kevin and others — tap ♥ on any review you find helpful.</p></div></div>
+    <div class="reviews">
+      <article class="review-card tilt tap reveal" data-tilt><span class="stars">★★★★★ 5.0</span><p>"Booked Dr. Weber for 2:00 PM and was on video at 2:01. The pre-visit checklist meant zero waiting. Migraines finally under control!"</p><div class="review-who"><img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Kevin" loading="lazy" onerror="this.style.display='none'"/><div><b>Kevin Merico</b><small>Neurology patient · 6 visits</small></div><button class="heart tap" style="position:static;margin-left:auto" data-toast="♥ Thanks! Review marked helpful">♥</button></div></article>
+      <article class="review-card tilt tap reveal" data-tilt><span class="stars">★★★★★ 5.0</span><p>"Maria's vaccination was due and the chat sorted it in minutes. Rescheduled to Friday with one tap. This is how healthcare should feel."</p><div class="review-who"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Maria" loading="lazy" onerror="this.style.display='none'"/><div><b>Maria S.</b><small>Paediatrics parent · 4 visits</small></div><button class="heart tap" style="position:static;margin-left:auto" data-toast="♥ Thanks! Review marked helpful">♥</button></div></article>
+      <article class="review-card tilt tap reveal" data-tilt><span class="stars">★★★★★ 4.9</span><p>"15% off my first cardiology consult, report downloaded straight from chat, follow-up only $40. Saved me two clinic trips already."</p><div class="review-who"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James" loading="lazy" onerror="this.style.display='none'"/><div><b>James P.</b><small>Cardiology patient · 3 visits</small></div><button class="heart tap" style="position:static;margin-left:auto" data-toast="♥ Thanks! Review marked helpful">♥</button></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER CTA ============ -->
+<section class="cta section">
+  <div class="container card glass tilt reveal cta-card" data-tilt>
+    <h2>Book Your Doctor Any Time Any where!</h2>
+    <p>Caring from Afar. Your health, our priority — 15% off first consultation, free follow-up chat, instant video.</p>
+    <div class="cta-row"><button class="btn-primary big tap magnetic" data-book-doctor="Dr. Weber Micheal">Get Started — it's free</button><button class="btn-ghost big tap" data-goto="doctors">Browse doctors</button></div>
+  </div>
+  <footer class="rich-foot">
+    <div class="container foot-grid">
+      <div class="foot-col">
+        <div class="foot-brand"><span class="logo-mark">✚</span> MediMate</div>
+        <p>Caring from Afar. Your health, our priority — book trusted doctors any time, anywhere. 15% off your first consultation.</p>
+        <p>⭐ 4.8 rated · ● 320+ doctors online now</p>
+      </div>
+      <div class="foot-col"><b>Explore</b>
+        <a class="tap" data-goto="home">Home</a>
+        <a class="tap" data-goto="doctors">Find doctors</a>
+        <a class="tap" data-goto="appointments">Appointments</a>
+        <a class="tap" data-goto="saved">Saved doctors</a>
+        <a class="tap" data-goto="chat">Chat with us</a>
+      </div>
+      <div class="foot-col"><b>Specialties</b>
+        <a class="tap" data-goto="doctors">🧠 Neurology</a>
+        <a class="tap" data-goto="doctors">🫀 Cardiology</a>
+        <a class="tap" data-goto="doctors">🧴 Dermatology</a>
+        <a class="tap" data-goto="doctors">📍 Paediatrics</a>
+        <a class="tap" data-goto="doctors">🦴 Radiology</a>
+      </div>
+      <div class="foot-col"><b>Visit us</b>
+        <p>📍 Heart Care Clinic, Room 205<br>City Medical Center</p>
+        <p>🕘 Mon–Sat · 9:00 AM – 6:00 PM<br>🚨 Emergency video in ~12 mins</p>
+        <form class="news-form" id="newsForm"><input id="newsEmail" type="email" placeholder="Email for weekly health tips" /><button class="tap" type="submit">Get tips</button></form>
+      </div>
+    </div>
+    <div class="container foot-bottom"><span>© 2026 MediMate • Hard-coded demo • No empty screens</span><span><a class="tap" data-goto="home">Home</a> · <a class="tap" data-goto="doctors">Doctors</a> · <a class="tap" data-goto="chat">Chat</a> · <a class="tap" data-toast="📄 Privacy policy (demo)">Privacy</a></span></div>
+  </footer>
+</section>
+</main>
+
+<!-- Mobile bottom bar -->
+<nav class="mobile-bar">
+  <button class="tap active" data-goto="home">🏠<span>Home</span></button>
+  <button class="tap" data-goto="appointments">📅<span>Visits</span></button>
+  <button class="tap fab" data-book-doctor="Dr. Weber Micheal">✚</button>
+  <button class="tap" data-goto="saved">💜<span>Saved</span></button>
+  <button class="tap" data-goto="chat">💬<span>Chat</span></button>
+</nav>
+
+<!-- Booking modal -->
+<div class="modal-backdrop" id="bookingModal" aria-hidden="true">
+  <div class="modal tilt" role="dialog" aria-modal="true">
+    <button class="modal-x tap" id="closeBooking">✕</button>
+    <small class="spec-tag">⚡ Instant booking — hard-coded</small>
+    <h3 id="bookingTitle">Book Dr. Weber Micheal</h3>
+    <p class="muted" id="bookingSub">⭐ 5.0 · $85/session · Today 2:00 PM available</p>
+    <div class="slot-grid" id="slotGrid">
+      <button class="tap active">Today 2:00 PM</button><button class="tap">Today 4:30 PM</button><button class="tap">Fri 1:00 PM</button><button class="tap">Sat 9:15 AM</button>
+    </div>
+    <div class="type-row"><button class="tap active" data-type="Video via flex call">📹 Video</button><button class="tap" data-type="Clinic visit">🏠 Clinic</button></div>
+    <input id="patientName" placeholder="Patient name — e.g. Kevin Merico" value="Kevin Merico"/>
+    <button class="btn-primary big tap full magnetic" id="confirmBooking">Confirm booking →</button>
+    <p class="tiny">Free cancellation • 15% first-visit discount applied • Receipt in chat</p>
+  </div>
+</div>
+
+<!-- Video modal -->
+<div class="modal-backdrop" id="videoModal" aria-hidden="true">
+  <div class="modal video-modal" role="dialog" aria-modal="true">
+    <button class="modal-x tap" id="closeVideo">✕</button>
+    <div class="vm-screen"><img id="videoImg" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=700&q=80&auto=format&fit=crop" alt="video" onerror="this.style.display='none'"/><span class="live">● LIVE</span><b id="videoName">Dr. Elizabeth Blackwell</b><small>Neurology · <span id="videoTimer">00:00</span></small></div>
+    <div class="video-controls big"><button class="tap" data-toast="🎙 Mic toggled">🎙</button><button class="tap" data-toast="📹 Camera toggled">📹</button><button class="tap end" id="endCallBtn">📞 End</button><button class="tap" data-chat-doctor="Dr. Weber Micheal">💬</button></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
