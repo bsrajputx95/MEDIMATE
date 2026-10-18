@@ -1,6 +1,7 @@
 import { neon } from '@neondatabase/serverless';
 import { drizzle } from 'drizzle-orm/neon-http';
 import * as schema from './schema';
+import crypto from 'crypto';
 
 let dbInstance: any = null;
 
@@ -8,30 +9,51 @@ const createMockDb = () => {
   console.warn('Using mock in-memory database');
   const store: Record<string, any[]> = {};
   
+  const createChain = (tableName: string, data: any[]) => {
+    const chain = {
+      where: () => chain,
+      orderBy: () => chain,
+      limit: () => chain,
+      offset: () => chain,
+      returning: () => chain,
+      execute: async () => data,
+      then: (cb: any) => Promise.resolve(data).then(cb),
+      catch: (cb: any) => Promise.resolve(data).catch(cb),
+    };
+    return chain;
+  };
+
   return {
     select: () => ({
       from: (table: any) => {
         const tableName = table._.name;
-        return {
-          where: () => [],
-          orderBy: () => [],
-          execute: async () => store[tableName] || [],
-          then: (cb: any) => Promise.resolve(store[tableName] || []).then(cb)
-        };
+        console.log(`Mock DB: selecting from ${tableName}`);
+        return createChain(tableName, store[tableName] || []);
       }
     }),
     insert: (table: any) => ({
       values: (values: any) => {
         const tableName = table._.name;
+        console.log(`Mock DB: inserting into ${tableName}`, values);
         if (!store[tableName]) store[tableName] = [];
-        const newRecord = { id: crypto.randomUUID(), ...values, createdAt: new Date() };
+        
+        // Simple UUID-like generator
+        const id = (typeof crypto !== 'undefined' && crypto.randomUUID) 
+          ? crypto.randomUUID() 
+          : 'mock-' + Math.random().toString(36).substring(2, 15);
+          
+        const newRecord = { id, ...values, createdAt: new Date() };
         store[tableName].push(newRecord);
-        return {
-          returning: () => [newRecord],
-          execute: async () => [newRecord],
-          then: (cb: any) => Promise.resolve([newRecord]).then(cb)
-        };
+        return createChain(tableName, [newRecord]);
       }
+    }),
+    update: (table: any) => ({
+      set: (values: any) => ({
+        where: () => createChain(table._.name, [])
+      })
+    }),
+    delete: (table: any) => ({
+      where: () => createChain(table._.name, [])
     })
   } as any;
 };

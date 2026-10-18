@@ -205,6 +205,7 @@ export async function apiFetch<T>(
 
   // Build URL
   const url = path.startsWith('http') ? path : `${API_BASE_URL}${path}`;
+  console.log(`API Request: ${method} ${url}`);
 
   // Build request config
   const requestConfig: RequestInit = {
