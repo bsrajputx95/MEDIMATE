@@ -21,15 +21,6 @@ A premium, production-ready health and wellness mobile application built with Re
 - Theme support (light/dark/system)
 - Real-time API integration with retry logic
 
-## 📱 Screenshots
-
-| Home | CURA | Healthyics |
-|------|------|------------|
-| ![Home](docs/screenshots/home.png) | ![CURA](docs/screenshots/cura.png) | ![Healthyics](docs/screenshots/healthyics.png) |
-
-| MedTalk | Profile | Auth |
-|---------|---------|------|
-| ![MedTalk](docs/screenshots/medtalk.png) | ![Profile](docs/screenshots/profile.png) | ![Auth](docs/screenshots/auth.png) |
 
 ## 🛠 Tech Stack
 
