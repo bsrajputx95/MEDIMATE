@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+.expo/
+.next/
+dist/
+build/
+.vscode/
+.kiro/
+.vercel/
+*.tsbuildinfo
+.DS_Store
